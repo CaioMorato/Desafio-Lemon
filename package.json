@@ -23,6 +23,6 @@
   "scripts": {
     "start": "nodemon --legacy-watch ./src/server.js",
     "test": "mocha './tests/**/*.test.js'",
-    "coverage": "nyc mocha ./tests"
+    "coverage": "nyc mocha './tests/**/*.test.js'"
   }
 }
