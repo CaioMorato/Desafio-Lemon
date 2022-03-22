@@ -4,17 +4,12 @@ const { beforeEach } = require('mocha');
 const { clientType } = require('../../../src/services/customerServices');
 
 const mockObject = {
-  numeroDoDocumento: '18576838352',
-  tipoDeConexao: 'monofasico',
   classeDeConsumo: 'residencial',
-  modalidadeTarifaria: 'azul',
-  historicoDeConsumo: [3162, 6562, 3079, 7284, 9053, 8179, 1167, 650, 8392, 775, 39, 1915],
 };
-
 
 describe('1 - Expects the "clientType" function', () => {
   beforeEach(() => {
-    mockObject.classeDeConsumo = 'industrial'
+    mockObject.classeDeConsumo = 'industrial';
   });
 
   it('1.1 - To return an object', () => {
