@@ -21,20 +21,20 @@ const clientType = (object) => {
   const { classeDeConsumo } = object;
 
   if (!eligibleClasses.includes(classeDeConsumo)) {
-    return false;
+    return { status: false, message: 'Classe de consumo não aceita' };
   }
 
-  return true;
+  return { status: true };
 };
 
 const consumptionFlag = (object) => {
   const { modalidadeTarifaria } = object;
 
   if (!eligibleFlags.includes(modalidadeTarifaria)) {
-    return false;
+    return { status: false, message: 'Modalidade tarifária não aceita' };
   }
 
-  return true;
+  return { status: true };
 };
 
 const totalConsumption = (consumptionData) => consumptionData.reduce((acc, curr) => acc + curr, 0);
@@ -45,10 +45,10 @@ const minimumConsumption = (object) => {
   const average = (totalConsumption(historicoDeConsumo) / historicoDeConsumo.length);
 
   if (average < eligibleConnections[tipoDeConexao]) {
-    return false;
+    return { status: false, message: 'Consumo muito baixo para tipo de conexão' };
   }
 
-  return true;
+  return { status: true };
 };
 
 const carbonEmission = (object) => {
