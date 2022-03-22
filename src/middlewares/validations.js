@@ -5,8 +5,7 @@ const validateFields = async (req, res, next) => {
   try {
     const validate = await customerSchemaValidation.validate(req.body);
 
-    console.log(validate);
-    if (validate.error) {
+    if (!validate || validate.error) {
       return res.status(StatusCodes.BAD_REQUEST).json({ error: validate.error.details[0].message });
     }
 
