@@ -12,7 +12,11 @@ const customerSchemaValidation = Joi.object({
   modalidadeTarifaria: Joi.string()
     .required()
     .valid(...modalidadesTarifarias),
-  historicoDeConsumo: Joi.array().items(Joi.number().min(0).max(9999)).min(3).max(12),
+  historicoDeConsumo: Joi.array()
+    .items(Joi.number().min(0).max(9999).required())
+    .min(3)
+    .max(12)
+    .required(),
 });
 
 module.exports = { customerSchemaValidation };

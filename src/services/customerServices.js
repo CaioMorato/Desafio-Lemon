@@ -28,7 +28,9 @@ const consumptionFlag = (object) => {
   return { status: true };
 };
 
-const totalConsumption = (consumptionData) => consumptionData.reduce((acc, curr) => acc + curr, 0);
+const totalConsumption = (consumptionData) => {
+  return consumptionData.reduce((acc, curr) => +acc + +curr, 0);
+};
 
 const minimumConsumption = (object) => {
   const { historicoDeConsumo, tipoDeConexao } = object;
