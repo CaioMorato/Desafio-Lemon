@@ -2,6 +2,7 @@ version: '3'
 
 services:
   lemon_api:
+    container_name: lemon_api
     build: .
     command: npm start
     ports:
