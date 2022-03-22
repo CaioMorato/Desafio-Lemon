@@ -1,5 +1,3 @@
-// const { tiposDeConexao, classesDeConsumo, modalidadesTarifarias } = require('../schemas/types');
-
 const eligibleClasses = [
   'comercial',
   'residencial',
@@ -63,5 +61,11 @@ const carbonEmission = (object) => {
 };
 
 module.exports = {
-  clientType, consumptionFlag, minimumConsumption, carbonEmission,
+  clientType,
+  consumptionFlag,
+  minimumConsumption,
+  carbonEmission,
+  eligibleClasses,
+  eligibleFlags,
+  eligibleConnections,
 };
