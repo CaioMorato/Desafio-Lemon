@@ -16,7 +16,7 @@ describe('1 - Expects the "consumptionFlag" function', () => {
     expect(consumptionFlag(mockObject)).to.be.an('object');
   });
 
-  it('1.2 - To return the correct object if the consumption class is NOT eligible', () => {
+  it('1.2 - To return the correct object if the consumption flag is NOT eligible', () => {
     mockObject.modalidadeTarifaria = 'azul';
 
     expect(consumptionFlag(mockObject).status).to.be.false;
@@ -30,7 +30,7 @@ describe('1 - Expects the "consumptionFlag" function', () => {
     expect(consumptionFlag(mockObject).message).to.be.equal('Modalidade tarifária não aceita');
   });
 
-  it('1.3 - To return the correct object if the consumption class IS eligible', () => {
+  it('1.3 - To return the correct object if the consumption flag IS eligible', () => {
     mockObject.modalidadeTarifaria = 'branca';
 
     expect(consumptionFlag(mockObject).status).to.be.true;
