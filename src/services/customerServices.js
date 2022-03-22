@@ -1,13 +1,6 @@
-const eligibleClasses = [
-  'comercial',
-  'residencial',
-  'industrial',
-];
+const eligibleClasses = ['comercial', 'residencial', 'industrial'];
 
-const eligibleFlags = [
-  'convencional',
-  'branca',
-];
+const eligibleFlags = ['convencional', 'branca'];
 
 const eligibleConnections = {
   monofasico: 400,
@@ -40,7 +33,7 @@ const totalConsumption = (consumptionData) => consumptionData.reduce((acc, curr)
 const minimumConsumption = (object) => {
   const { historicoDeConsumo, tipoDeConexao } = object;
 
-  const average = (totalConsumption(historicoDeConsumo) / historicoDeConsumo.length);
+  const average = totalConsumption(historicoDeConsumo) / historicoDeConsumo.length;
 
   if (average < eligibleConnections[tipoDeConexao]) {
     return { status: false, message: 'Consumo muito baixo para tipo de conexão' };
@@ -61,11 +54,12 @@ const carbonEmission = (object) => {
 };
 
 module.exports = {
+  eligibleClasses,
+  eligibleFlags,
+  eligibleConnections,
+  totalConsumption,
   clientType,
   consumptionFlag,
   minimumConsumption,
   carbonEmission,
-  eligibleClasses,
-  eligibleFlags,
-  eligibleConnections,
 };
