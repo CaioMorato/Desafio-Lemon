@@ -4,7 +4,7 @@ const { validateFields } = require('./middlewares/validations');
 
 routes.get('/', (req, res) => {
   console.log('pong');
-  res.json('Pong!');
+  res.json('teste');
 });
 routes.post('/customer', validateFields);
 
