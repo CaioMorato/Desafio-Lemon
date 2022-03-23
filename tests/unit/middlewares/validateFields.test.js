@@ -133,4 +133,13 @@ describe('1 - Expects "validateFields" middleware to validade', () => {
     expect(response.body).to.have.property('error');
     expect(response.body.error).to.be.equals('"historicoDeConsumo" must be an array');
   });
+
+  it('1.5 - That if all parameters are fine, should return the correct response', async () => {
+    response = await chai.request(app).post('/customer').send(mockRequestBody);
+
+    expect(response.status).to.be.equal(200);
+    expect(response.body).to.not.have.property('error');
+    expect(response.body).to.have.property('economiaAnualDeCO2');
+    expect(response.body.economiaAnualDeCO2).to.be.equal('5553.24');
+  });
 });
