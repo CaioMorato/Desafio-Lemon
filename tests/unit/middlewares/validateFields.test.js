@@ -6,9 +6,6 @@ chai.use(chaiHttp);
 const sinon = require('sinon');
 
 const app = require('../../../src/app');
-const { tiposDeConexao } = require('../../../src/schemas/types');
-
-const { validateFields } = require('../../../src/middlewares/validations');
 
 let mockRequestBody = {
   numeroDoDocumento: '14041737706',
