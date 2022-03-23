@@ -5,7 +5,7 @@ const { checkEligibility } = require('./controller/customerController');
 
 routes.post('/customer', validateFields, checkEligibility);
 
-routes.post('/', (req, res) => {
+routes.get('/', (req, res) => {
   res.status(200).send({ status: 200, message: 'API funcionando!' });
 });
 
