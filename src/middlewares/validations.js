@@ -11,7 +11,7 @@ const validateFields = async (req, res, next) => {
 
     next();
   } catch (err) {
-    return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ error: err });
+    console.error(err);
   }
 };
 
