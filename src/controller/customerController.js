@@ -18,7 +18,7 @@ const checkEligibility = async (req, res) => {
       const filteredErrorStack = errorStack.filter((item) => !!item);
 
       return res
-        .status(StatusCodes.NOT_ACCEPTABLE)
+        .status(StatusCodes.OK)
         .json({ elegivel: false, razoesInelegibilidade: filteredErrorStack });
     }
 
