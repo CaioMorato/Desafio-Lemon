@@ -42,7 +42,7 @@ Esse projeto foi feito utilizando Docker, mas caso não deseje instalar nada ou 
 
 ### Utilização local
 
-1. Para utilizar localmente é necessário ter o docker instalado em sua máquina. Mais instruções para instalação podem ser encontradas [aqui](https://docs.docker.com/get-docker/).
+1. Para utilizar localmente é necessário ter o Docker instalado em sua máquina. Mais instruções para instalação podem ser encontradas [aqui](https://docs.docker.com/get-docker/).
 
 2. Com o Docker instalado, você pode baixar o projeto em sua máquina utilizando o comando:
 
@@ -61,29 +61,18 @@ Esse projeto foi feito utilizando Docker, mas caso não deseje instalar nada ou 
 ### **Utilização online**
 
 1. Foi disponibilizado uma api online onde poderá ser feito requisições de forma a não instalar nada no computador. É só fazer as requisições com os formatos descritots na seção de **ROTAS**. O link para acessar a API está logo abaixo.
-   1. **https:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa**
+   1. **https://desafio-lemon-api.herokuapp.com/**
+   1. [ATENÇÃO] - Vale destacar que a **primeira requisição** do Heroku pode demorar e as vezes até falhar. Se não funcionar de primeira, por gentileza **tente cancelar e refazer** a requisição.
 
 
 
-### **Utilização com interface gráfica**
+### [\*BONUS\*] - **Utilização com interface gráfica**
 
-1. Também foi disponibilizado um website em que através do preenchimento de um formulário simples, é possível obter os resultados gerados pela API. Neste caso o site consome a mesma API gerada acima, porém não é necessário colocar endpoints, somente o preenchimento do formulário já entrega o resultado. O link para acessar o website com interface gráfica está logo abaixo.
+Em caráter de bônus, produzi um **website** para que se possa utilizar a aplicação através de uma interface gráfica a fim de aumentar a experiência do usuário, mas, além disso, mostrar que me preocupo além de tudo com todas as fases do processo que meu código passa até chegar ao cliente final.
 
-   1. 1. **https:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa**
+O website pode ser acessado através deste link: **https://desafio-lemon-front.vercel.app/**
 
-   
-
----
-
-## **Ambiente de Desenvolvimento .env**
-
-Há um arquivo na raiz do projeto chamado .env.example. Para que a aplicação funcione você deve usá-lo como base.
-
-Renomeie o arquivo para somente ".env" e utilize as 2 variáveis definidas tendo em mente:
-
-**_`PORT`_** será a variável que define a porta onde você prefere que o servidor seja iniciado. Caso não coloque, o padrão será 3000.
-
-**_`SECRET`_** será a variável que armazena o **_segredo_** do jsonwebtoken.
+Vale lembrar que aplicam-se as mesmas regras de negócio da API que podem ser verificadas abaixo.
 
 ---
 
@@ -117,6 +106,23 @@ Caso o cliente **NÃO** seja elegível, a API retorna no mesmo corpo da requisi�
 ---
 
 ## Rotas | Endpoints
+
+## Verificar funcionamento da API
+
+- #### GET- `/`
+
+Através desse endpoint, é possível verificar se a API está em funcionamento diretamente pelo browser, caso o projeto seja baixado localmente.
+
+Ao fazer a requisição para a rota especificada, o programa retornará a seguinte resposta:
+
+```json
+{
+	"status": 200,
+	"message": "API funcionando!"
+}
+```
+
+
 
 ## Verificar elegibilidade
 
@@ -225,9 +231,9 @@ Foram utilizadas as bibliotecas **mocha**,**chai** e **sinon** para efetuar os t
 
 **`yarn run coverage`**
 
-##### Gerando a seguinte resposta:
+##### Gerando a seguinte resposta, que mostra que o projeto conta uma cobertura de 97% de testes unitários:
 
-![coverage-test-image](./tests/images/test-coverage.png)
+![coverage-test-image](./public/test-coverage.png)
 
 ---
 
