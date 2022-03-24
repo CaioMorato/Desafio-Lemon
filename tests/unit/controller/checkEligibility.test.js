@@ -3,8 +3,6 @@ const chaiHttp = require('chai-http');
 const { expect } = chai;
 chai.use(chaiHttp);
 
-const sinon = require('sinon');
-
 const app = require('../../../src/app');
 
 let mockRequestBody = {
@@ -46,7 +44,7 @@ describe('1 - Expects the "checkEligibility" controller', () => {
     mockRequestBody.classeDeConsumo = 'rural';
     response = await chai.request(app).post('/customer').send(mockRequestBody);
 
-    expect(response.status).to.be.equal(406);
+    expect(response.status).to.be.equal(200);
     expect(response.body).to.have.property('elegivel');
     expect(response.body.elegivel).to.be.false;
     expect(response.body).to.have.property('razoesInelegibilidade');

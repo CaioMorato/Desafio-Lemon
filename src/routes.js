@@ -1,12 +1,10 @@
 // vitals
 const routes = require('express').Router();
 const { validateFields } = require('./middlewares/validations');
-const { checkEligibility } = require('./controller/customerController');
+const { checkEligibility, checkAPIAvailability } = require('./controller/customerController');
 
 routes.post('/customer', validateFields, checkEligibility);
 
-routes.get('/', (req, res) => {
-  res.status(200).send({ status: 200, message: 'API funcionando!' });
-});
+routes.get('/', checkAPIAvailability);
 
 module.exports = routes;

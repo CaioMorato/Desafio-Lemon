@@ -30,4 +30,8 @@ const checkEligibility = async (req, res) => {
   }
 };
 
-module.exports = { checkEligibility };
+const checkAPIAvailability = async (req, res) => {
+  res.status(200).send({ status: 200, message: 'API funcionando!' });
+};
+
+module.exports = { checkEligibility, checkAPIAvailability };
