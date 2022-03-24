@@ -24,7 +24,7 @@
   },
   "scripts": {
     "start": "nodemon --legacy-watch ./src/server.js",
-    "test": "mocha './tests/**/*.test.js'",
+    "test": "mocha './tests/**/*.test.js' --timeout 15000",
     "coverage": "nyc npm run test"
   }
 }
