@@ -32,9 +32,9 @@
 
 ## **Pré requisitos**
 
-##### Este projeto foi feito utilizando Docker, portanto, caso queira utilizar esse projeto, é necessário já ter feito a instalação.
+##### Este projeto foi feito utilizando Docker e docker-compose, portanto, caso queira utilizar esse projeto, é necessário já ter feito a instalação.
 
-Esse projeto foi feito utilizando Docker, mas caso não deseje instalar nada ou baixar o projeto em sua máquina, é possível fazê-lo pois foi disponibilizada uma versão online da aplicação. Tanto as formas de utilização LOCAL quanto ONLINE serão instruídas na seção abaixo.
+Esse projeto foi feito utilizando Docker e docker-compose, mas caso não deseje instalar nada ou baixar o projeto em sua máquina, é possível fazê-lo pois foi disponibilizada uma versão online da aplicação. Tanto as formas de utilização LOCAL quanto ONLINE serão instruídas na seção abaixo.
 
 ---
 
@@ -42,9 +42,9 @@ Esse projeto foi feito utilizando Docker, mas caso não deseje instalar nada ou 
 
 ### Utilização local
 
-1. Para utilizar localmente é necessário ter o Docker instalado em sua máquina. Mais instruções para instalação podem ser encontradas [aqui](https://docs.docker.com/get-docker/).
+1. Para utilizar localmente é necessário ter o Docker instalado em sua máquina. Mais instruções para instalação podem ser encontradas nos links a seguir:  [Docker](https://docs.docker.com/get-docker/). e [Docker-compose](https://docs.docker.com/compose/install/)
 
-2. Com o Docker instalado, você pode baixar o projeto em sua máquina utilizando o comando:
+2. Com o Docker e Compose instalados, você pode baixar o projeto em sua máquina utilizando o comando:
 
    **`git clone git@github.com:CaioMorato/desafio-lemon.git`**
 
@@ -78,7 +78,7 @@ Vale lembrar que aplicam-se as mesmas regras de negócio da API que podem ser ve
 
 ## Contexto e Regras de Negócio
 
-### O contexto dessa API é gerar respostas uma resposta se o perfil do cliente é elegível ou não para a empresa, através de um input de usuário.
+### O contexto dessa API é gerar uma resposta se o perfil do cliente é elegível ou não para a empresa, através de um input de usuário.
 
 
 
