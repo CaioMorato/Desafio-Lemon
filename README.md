@@ -50,7 +50,9 @@ Esse projeto foi feito utilizando Docker e docker-compose, mas caso não deseje 
 
 3. Entre na pasta do projeto digitando o comando **`cd desafio-lemon`**
 
-4. Inicie o container do docker utilizando o comando **`docker-compose -p NOME_PARA_O_CONTAINER up`**
+3. Instale as dependências do projeto digitando **`npm install`** em seu terminal, ou **`yarn`** caso prefira o gerenciador yarn
+
+4.  Inicie o container do docker utilizando o comando **`docker-compose -p NOME_PARA_O_CONTAINER up`**
 
    1. Repare que a flag -p com o **NOME_PARA_O_CONTAINER** é opcional, é só uma maneira de você dar o nome para um container e uma imagem. Também vale destacar que quando você der o nome, eles possuirão um sufixo **_app**. Caso não seja passado essa flag com um nome desejado, o nome padrão tanto da **imagem** quanto do **conteiner** serão "**desafio-lemon_app**"
 
