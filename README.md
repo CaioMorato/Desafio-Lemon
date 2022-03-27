@@ -16,7 +16,7 @@
 - [Chai](https://www.chaijs.com/) v^4.3.6 - Asserções dos testes
 - [Eslint](https://eslint.org/) v^8.11.0 - Padronização e formatação do projeto
 - [Mocha](https://joi.dev/) v^9.2.2 - Estruturação e runtime de testes
-- [Sinon](https://sinonjs.org/) v^17.6.0 - Mocks, spiões e stubs para testes
+- [Sinon](https://sinonjs.org/) v^17.6.0 - Mocks, espiões e stubs para testes
 - [nyc/Istanbul](https://github.com/istanbuljs/nyc) v^13.0.1 - Cobertura de testes
 
 ## **Sumário**
@@ -42,7 +42,7 @@ Esse projeto foi feito utilizando Docker e docker-compose, mas caso não deseje 
 
 ### Utilização local
 
-1. Para utilizar localmente é necessário ter o Docker instalado em sua máquina. Mais instruções para instalação podem ser encontradas nos links a seguir:  [Docker](https://docs.docker.com/get-docker/). e [Docker-compose](https://docs.docker.com/compose/install/)
+1. Para utilizar localmente é necessário ter o Docker e Docker-Compose instalados em sua máquina. Mais instruções para instalação podem ser encontradas nos links a seguir:  [Docker](https://docs.docker.com/get-docker/). e [Docker-compose](https://docs.docker.com/compose/install/)
 
 2. Com o Docker e Compose instalados, você pode baixar o projeto em sua máquina utilizando o comando:
 
@@ -54,7 +54,7 @@ Esse projeto foi feito utilizando Docker e docker-compose, mas caso não deseje 
 
 4.  Inicie o container do docker utilizando o comando **`docker-compose -p NOME_PARA_O_CONTAINER up`**
 
-   1. Repare que a flag -p com o **NOME_PARA_O_CONTAINER** é opcional, é só uma maneira de você dar o nome para um container e uma imagem. Também vale destacar que quando você der o nome, eles possuirão um sufixo **_app**. Caso não seja passado essa flag com um nome desejado, o nome padrão tanto da **imagem** quanto do **conteiner** serão "**desafio-lemon_app**"
+   1. Repare que a flag -p com o **NOME_PARA_O_CONTAINER** é opcional, é só uma maneira de você dar o nome para um container e uma imagem. Também vale destacar que quando você der o nome, eles possuirão um sufixo **_app**. Caso não seja passado essa flag com um nome desejado, o nome padrão tanto da **imagem** quanto do **container** serão "**desafio-lemon_app**"
 
 5. O servidor está iniciado na porta 3000 e você pode começar a fazer as requisições com os formatos descritos na seção de **ROTAS**
 
@@ -62,7 +62,7 @@ Esse projeto foi feito utilizando Docker e docker-compose, mas caso não deseje 
 
 ### **Utilização online**
 
-1. Foi disponibilizado uma api online onde poderá ser feito requisições de forma a não instalar nada no computador. É só fazer as requisições com os formatos descritots na seção de **ROTAS**. O link para acessar a API está logo abaixo.
+1. Foi disponibilizado uma api online onde poderá ser feito requisições de forma a não instalar nada no computador. É só fazer as requisições com os formatos descritos na seção de **ROTAS**. O link para acessar a API está logo abaixo.
    1. **https://desafio-lemon-api.herokuapp.com/**
    1. [ATENÇÃO] - Vale destacar que a **primeira requisição** do Heroku pode demorar e as vezes até falhar. Se não funcionar de primeira, por gentileza **tente cancelar e refazer** a requisição.
 
@@ -233,7 +233,7 @@ Foram utilizadas as bibliotecas **mocha**,**chai** e **sinon** para efetuar os t
 
 **`yarn run coverage`**
 
-##### Gerando a seguinte resposta, que mostra que o projeto conta uma cobertura de 97% de testes unitários:
+##### Gerando a seguinte resposta, que mostra que o projeto conta uma cobertura de 97%+ de testes unitários:
 
 ![coverage-test-image](./public/test-coverage.png)
 
